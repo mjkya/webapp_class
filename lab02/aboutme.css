@@ -1,0 +1,79 @@
+body {
+  font-family: "Helvetica", "Verdana", sans-serif;
+  background-color: #1D2475;
+  color : #939396;
+  background-image: url("./pubg_white.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 130pt;
+}
+
+strong{
+	color: #FFF86B
+}
+h1{
+	font-size: 40pt;
+	color: #F7931E;
+	text-shadow: 3px -3px green;
+}
+h2{
+	color: #F7931E;
+}
+a{
+	color: #FF4F4F;
+	text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+table {                     
+border: 0.1em dashed;             
+border-collapse:collapse }
+ 
+td {    
+border: 0.1em dashed;              
+padding: 0.5em; }               
+ 
+th {    
+border: 0.1em dashed;            
+padding: 1em;   }               
+ 
+tr {    
+height: 1em;    }
+
+q{
+	color: #D1DFEB;
+}
+
+li{
+    text-align: left;
+}
+
+ul{
+    list-style-type: square;
+}
+blockquote{
+    text-align: left;
+}
+
+dl{
+    font-size: 70%;
+}
+dt{
+    font-weight: bold;
+    color: #FFF86B
+}
+
+p::first-letter {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+img{
+    outline-style: ridge;
+    outline-width: medium;
+    outline-color: #F7931E;
+
+}
