@@ -1,0 +1,3 @@
+overflow: content가 가장 큰 거에 맞춰서 맞춰짐. 스크롤도 만들 수 있음.
+
+inline element: width, height 등등 설정할 수 없음.
