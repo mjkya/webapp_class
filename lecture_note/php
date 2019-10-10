@@ -1,0 +1,17 @@
+.html file 은 static 이라 모두에게 같은 페이지가 보여지지만,
+.php file 은 dynamic 이라 모두에게 다른 페이지가 보여진다. ex)facebook - 모두 같은 facebook 주소로 접근해도, 
+다른 페이지, 다른 광고.. 다른 뉴스피드 페이지가 뜬다.
+
+.php file은 hard drive에서 열 수 없고, php가 embedded된 server 에서 .php 확장자로 열 수 있다.
+
+php에서 '.'은 string 두 개를 붙일 때 사용. string.string 이 두 개의 string을 붙이는 것. +를 하면 string들을 더해준다.
+
+php is type insensitive language. 그래서 5 + "7"을 해도 12를 return 한다. 
+
+pass by reference '&'
+$a =3;
+$test = &$a;
+$test= 5;
+print $a;
+
+5가 print 된다. 하지만 line13에 &$a가 아닌, $a로 지정을 하면 3이 print 된다. 
