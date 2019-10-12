@@ -15,3 +15,6 @@ $test= 5;
 print $a;
 
 5가 print 된다. 하지만 line13에 &$a가 아닌, $a로 지정을 하면 3이 print 된다. 
+
+
+php에서 "" 과 '' 모두 string을 지정하는데 사용할 수 있다.  
