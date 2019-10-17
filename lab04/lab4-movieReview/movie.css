@@ -1,0 +1,116 @@
+body{
+	background-image: url("./background.png");
+	text-align:center;
+}
+
+h1{
+	font-family: Tahoma, Verdana, sans-serif;
+	text-align: center;
+	font-size: 24pt;
+	text-shadow: 3px 3px #999999;
+}
+
+.banner{
+	background-image: url("./bannerbg.png");
+	background-repeat: repeat-x;
+}
+
+#percent{
+	font-size: 48px;
+	color: red;
+	background-image: url("./rbg.png");
+	background-repeat: repeat-x;
+	height: 83px;
+	font-weight: bold;
+	font-size: 48pt;
+}
+
+#percent > img{
+	float: left;
+}
+
+#thirtythree{
+	float: left;
+	margin-top: 5px;
+
+}
+
+
+#all{
+	text-align: center;
+	display: inline-block;
+	width: 800px;
+	border: 4px solid gray;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+#poster{
+	float: right;
+	overflow: hidden;
+	width: auto;
+	height: auto;
+}
+
+.reviews{
+	background-color: #E8DC9B;
+	font-size: 8pt;
+	font-weight: bold;
+	border-radius: 10px;
+	padding-bottom: 8px;
+	margin-top: 8px;
+	margin-left: 8px;
+	border: 2px gray solid;
+	text-align: left;
+}
+
+.comment{
+	text-align: left; 
+}
+
+.comment > img{
+	margin-left:5px;
+}
+
+.col{
+	float:left;
+	width: 32%;
+	margin-right: 2%;
+	margin-top: 2%;
+	margin-bottom: 12%;
+}
+
+.ital{
+	font-style: italic;
+	margin-left: 42px;
+}
+
+.right{
+	float: right;
+	width: 250px;
+	background-color: #A2B964;
+	height: auto;
+}
+
+.right > dl{
+	padding: 10pt;
+	font-size: 8pt;
+	font-family: Arial, sans-serif;	
+	text-align: left;
+}
+dt{
+	font-weight: bold;
+}
+dd{
+	margin-bottom: 10pt;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+
+.footer{
+/*	background-color: #A2B964;*/
+	float: bottom;
+}
+
