@@ -16,5 +16,14 @@ print $a;
 
 5가 print 된다. 하지만 line13에 &$a가 아닌, $a로 지정을 하면 3이 print 된다. 
 
-
 php에서 "" 과 '' 모두 string을 지정하는데 사용할 수 있다.  
+
+//example with explode
+foreach (file("names.txt") as $name) {
+  $tokens = explode(" ", $name);
+  ?>
+  <p> author: <?= $tokens[2] ?>, <?= $tokens[0] ?> </p>
+  <?php
+}
+
+에서 21번줄은 파일을 읽는 것. 지금 여기선 last name 먼저 찍고 first name 찍는 것. middle name 제외하고 print하기.
