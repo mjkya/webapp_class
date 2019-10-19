@@ -1,2 +1,5 @@
 google 에서도 google search 할 때 ? 하고 뒤에 검색 내용 나오고.. 여러개 검색할 때는 &
 url에 들어갈 수 있는 text수가 한정적이기 때문에 무한으로 보내고 할 수는 없다. 
+
+<input type="text" size="10" maxlength="8" />
+maxlength를 지정하면 빈칸 안에 들어갈 수 있는 최대 character의 갯수를 미리 제한할 수 있다. 
