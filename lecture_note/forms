@@ -2,4 +2,25 @@ google 에서도 google search 할 때 ? 하고 뒤에 검색 내용 나오고..
 url에 들어갈 수 있는 text수가 한정적이기 때문에 무한으로 보내고 할 수는 없다. 
 
 <input type="text" size="10" maxlength="8" />
-maxlength를 지정하면 빈칸 안에 들어갈 수 있는 최대 character의 갯수를 미리 제한할 수 있다. 
+maxlength를 지정하면 빈칸 안에 들어갈 수 있는 최대 character의 갯수를 미리 제한할 수 있다.
+radio 버튼은 value를 줘야 한다. radio button checked 하나 미리 pre 해두는게 일반적.
+
+<fieldset> radio button check box 를 만들 때 border를 만들어 준다.
+<legend> fieldset box에 이름을 달아주는 역할
+radio button 항상 value를 지정해서 server에 보내는게 낫다.
+
+http 에는 data를 보내는 두가지 방식이 있다.
+1. get - 이 data 나 보내줘(like google search), url을 사용해서 보내는 방식.
+2. post - 내가 이 data를 서버에 올릴테니 데이터를 처리해서 보내줘(large chunk of data-like photo-를 보내기 효율적)
+url의 길이는 한정적이고 비밀번호와 같은 정보를 url에 담을 수 없으니 post 방식을 쓰는 것.
+
+<form action="http://foo.com/app.php" method="post">
+  <div>
+    Name: <input type="text" name="name" /> <br />
+    Food: <input type="text" name="meal" /> <br />
+    <label>Meat? <input type="checkbox" name="meat" /></label> <br />
+    <input type="submit" />
+  <div>
+</form>
+
+원래 form의 data 전송 방식은 get이 defalut. 여기서 method="post"를 붙이면 post 방식으로 보내게 된다.
