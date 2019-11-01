@@ -24,3 +24,7 @@ url의 길이는 한정적이고 비밀번호와 같은 정보를 url에 담을 
 </form>
 
 원래 form의 data 전송 방식은 get이 defalut. 여기서 method="post"를 붙이면 post 방식으로 보내게 된다.
+
+php 에서 . 은 모든 캐릭터가 될 수 있다. 대신 lone break(\n)는 안 됨.
+/.oo.y/ matches "Doocy", "goofy", "LooNy"
+/mart/i matches "Marty Stepp", "smart fellow", "WALMART"
