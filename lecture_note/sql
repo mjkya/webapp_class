@@ -1,0 +1,5 @@
+SELECT name FROM cities WHERE id = 17;
+: data select 하는 방법
+
+INSERT INTO countries VALUES ('SLD', 'ENG', 'T', 100.0);
+: data 삽입하는 방법
