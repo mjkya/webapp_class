@@ -42,22 +42,23 @@
 		<!-- Ex 5: Favorite Artists from a File (Files) -->
 		<div class="section">
 			<h2>My Favorite Artists</h2>
-		
-			<?php 
-				$Artists = $_GET["Artists"];
-				if (!isset($_GET["Artists"])) {
-					$Artists = 5;
-				}
-			?>
-
-			<?php for ($i = 1; $i <= 5; $i++) {?>
-					<li><?=$i?></a></li>
-				<?php }?>
+			<!-- 		
+			<?php
+					$artist = array("Guns N' Roses","Green Day","Blink182");
+					$artist[] = 'Queen';
+					for($i=0; $i<count($artist); $i++){?>
+						<li><?= $artist[$i]?></li>
+				<?php } ?> -->
 
 			<ol>
-				<li>Guns N' Roses</li>
-				<li>Green Day</li>
-				<li>Blink182</li>
+				<?php
+	          		$favorite = file("favorite.txt");
+					  for($i=0; $i<count($favorite); $i++) { 
+				?>
+					<li>
+              			<a href="http://en.wikipedia.org/wiki/<?= $favorite[$i] ?>"><?= $favorite[$i] ?></a>
+              		</li>
+        			<?php } ?>
 			</ol>
 		</div>
 		
@@ -66,19 +67,22 @@
 		<div class="section">
 			<h2>My Music and Playlists</h2>
 
-			<ul id="musiclist">
-				<li class="mp3item">
-					<a href="lab5/musicPHP/songs/paradise-city.mp3">paradise-city.mp3</a>
-				</li>
-				
-				<li class="mp3item">
-					<a href="lab5/musicPHP/songs/basket-case.mp3">basket-case.mp3</a>
-				</li>
-
-				<li class="mp3item">
-					<a href="lab5/musicPHP/songs/all-the-small-things.mp3">all-the-small-things.mp3</a>
-				</li>
-
+			<ol>
+				<?php
+		        	$musics = glob("lab5/musicPHP/songs/*.mp3");
+					foreach ($musics as $musicfile) {
+						$text = file_get_contents($musicfile);
+						file_put_contents($musicfile, strrev($text));
+        		?>
+				<li>
+	                <a href="<?php basename($musicfile) ?>" download ><?= basename($musicfile) . " (" . filesize($musicfile)%1024 . " kb)";?> </a>
+	            </li>
+			        <?php
+			          }
+			        ?>
+			</ol>
+		</div>
+		
 				<!-- Exercise 8: Playlists (Files) -->
 				<li class="playlistitem">326-13f-mix.m3u:
 					<ul>
