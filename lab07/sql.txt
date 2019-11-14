@@ -1,5 +1,4 @@
 /* -- EX1 -- */
-
 CREATE TABLE student(
 	student_id INTEGER NOT NULL,
 	name VARCHAR(10) NOT NULL,
@@ -22,7 +21,6 @@ CREATE TABLE department(
 
 
 /* -- EX2 -- */
-
 ALTER TABLE student
 ALTER COLUMN major VARCHAR(30);
 
@@ -43,18 +41,17 @@ INSERT INTO student(student_id, name, year, dept_no, major) values (20080003, 'L
 INSERT INTO student(student_id, name, year, dept_no, major) values (20040002, 'Jacob William', 4, 5, 'Law');
 INSERT INTO student(student_id, name, year, dept_no, major) values (20070001, 'Emily Rose', 4, 4, 'Business Administration');
 INSERT INTO student(student_id, name, year, dept_no, major) values (20100001, 'Ethan Hunt', 3, 4, 'Business Administration');
-INSERT INTO student(student_id, name, year, dept_no, major) values (20110002, 'Jason Mraz' 2, 1, 'Electrical Engineering');
+INSERT INTO student(student_id, name, year, dept_no, major) values (20110002, 'Jason Mraz', 2, 1, 'Electrical Engineering');
 INSERT INTO student(student_id, name, year, dept_no, major) values (20030002, 'John Smith', 5, 1, 'Computer Science');
 INSERT INTO student(student_id, name, year, dept_no, major) values (20070003, 'Sophia Park', 4, 3, 'Law');
 INSERT INTO student(student_id, name, year, dept_no, major) values (20070007, 'James Michael', 2, 4, 'Business Administration');
 INSERT INTO student(student_id, name, year, dept_no, major) values (20100003, 'James Bond', 3, 1, 'Computer Science');
 INSERT INTO student(student_id, name, year, dept_no, major) values (20070005, 'Olivia Madison', 2, 5, 'English Language and Literature');
 
-
 ALTER TABLE department
 MODIFY COLUMN dept_name VARCHAR(50);
 ALTER TABLE department
-MODIFY COLUMN major VARCHAR(40); 
+MODIFY COLUMN major VARCHAR(60); 
 
 INSERT INTO department(dept_no, dept_name, office, office_tel) values (1, 'Computer Science', 'Science Building 101', '02-3290-0123');
 INSERT INTO department(dept_no, dept_name, office, office_tel) values (2, 'Electrical Engineering', 'Engineering Building 401', '02-3290-2345');
@@ -64,8 +61,21 @@ INSERT INTO department(dept_no, dept_name, office, office_tel) values (5, 'Engli
 
 
 /* -- EX3 -- */
+UPDATE department SET dept_name='Electrical and Electronics Engineering' WHERE dept_name='Electrical Engineering';
+INSERT INTO department(dept_no, dept_name, office, office_tel) values (6, 'Special Education', 'Education Building 403', '02-3290-2347');
+UPDATE student SET major = 'Special Education' WHERE student_id = 20110001;
+DELETE FROM student WHERE student_id = 20110002;
+DELETE FROM student WHERE student_id = 20030002;
 
 
+/* -- EX4 -- */
+SELECT * FROM student WHERE major = 'Computer Science';
+SELECT * FROM student WHERE id, year, major; // 이거 모르겠다ㅠ
+SELECT * FROM student WHERE year = 3;
+SELECT * FROM student WHERE year = 1 OR year = 2;
+SELECT * FROM student WHERE dept_no = 4;
 
 
-
+/* -- EX5 -- */
+SELECT * FROM student WHERE student_id LIKE '2007%';
+SELECT * FROM student ORDER BY 'stdent_id';
