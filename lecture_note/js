@@ -1,0 +1,8 @@
+<button onclick="myfunction();">CLick me</button>
+button에 function 적용할 때, myfunction(); 이렇게 괄호랑 세미콜론까지 붙여줘야 된다.
+
+string 이 number를 이긴다. 1 + "2" = "12" 가 됨.
+
+ParseInt("123") = 123
+ParseInt("0123") = 83
+: 왜?? 123은 10진법으로 conversion을 하지만, 맨 앞이 0으로 시작하면 8진법으로 계산해서 83을 되돌려준다.
