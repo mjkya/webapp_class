@@ -11,12 +11,26 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
 		
 		<!-- link to your script file here -->
+		<script src="pimpmytext.js"></script>
 		
 	</head>
 
 	<body>
 		<h1>Pimp My Text</h1>
+		<fieldset>
+			<legend>Text</legend>
+			<textarea id="text" rows="4" cols="30"></textarea>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Pimp It</legend>
+			<button onclick="javascript:resize()">Bigger Pimpin'!</button>
+			<br>
+			<input id="bling" type="checkbox" onclick="javascript:alert()">Bling
+			<br>
+			<button onclick="javascript:snoff()">Snoopify</button>
 
+		</fieldset>
 		<!-- Your UI controls go here -->
 		
 	</body>
