@@ -1,0 +1,22 @@
+var data = JSON.parse(ajax.responseText); // JS
+{
+    "window": {
+        "title": "Sample Widget",
+        "width": 500,
+        "height": 500
+    },
+    "image": { 
+        "src": "images/logo.png",
+        "coords": [250, 150, 350, 400],
+        "alignment": "center"
+    },
+    "messages": [
+        {"text": "Save", "offset": [10, 30]}
+        {"text": "Help", "offset": [ 0, 50]},
+        {"text": "Quit", "offset": [30, 10]},
+    ],
+    "debug": "true"
+} //Json
+
+이런게 주어진 상황에서 
+var y = data.messages[len - 1].offset[1]; 이렇게 하면 맨 마지막 메세지의 2번째 offset 값을 준다, which is 10.
